@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<script src="./clientchat/assets/js/vendor/jquery-3.1.0.min.js"></script>
+<script src="./clientchat/assets/js/socket.io.js"></script>
+<body>
+<input type="text" name="question" class= "question">
+<button onclick="myFunction()">ASK!!!</button>
+<p id="answer">Answer:</p>
+
+</body>
+</html>
+
+<script>
+var socket ;
+socket = io();
+$(document).ready(function() {
+    socket.on('receive_msg', function (answer) {
+        $( "p" ).text( answer );
+    });
+});
+function myFunction() {
+    var value = $('input').val();
+    socket.emit('send_msg',value);
+    console.log('123123');
+}
+
+</script>
