@@ -327,6 +327,7 @@ function receivedPostback(event) {
   // The 'payload' param is a developer-defined field which is set in a postback 
   // button for Structured Messages. 
   var payload = event.postback.payload;
+  console.log("payload :" + payload);
 
   switch(payload){
     case "alibi":
@@ -347,14 +348,16 @@ function receivedPostback(event) {
                 {
                   "title" : "SKY726",
                   "subtitle" : "Address: 25/F, 726 Nathan Rd, \n phone: 23903889 \n Rate: HK$2 = 1 Mile",
-                  "image_url" : "https://amlfbmsger.herokuapp.com/img/sky726.png",
+                  "image_url" : "https://amlchat.herokuapp.com/img/sky726.png",
                   "default_action" : {
                     "type" : "web_url",
                     "url" : "http://dining.asiamiles.com/partner/sky726?a=Mongkok"
                   },
                   "buttons" : [
                     {
-
+                      "type" : "web_url",
+                      "url" : "http://dining.asiamiles.com/partner/sky726?a=Mongkok",
+                      "title" : "website"
                     }
                   ]
                 }
@@ -561,31 +564,31 @@ var food_options = [
           "content_type":"text",
           "title":"Chinese",
           "payload":"",
-          "image_url":"https://amlfbmsger.herokuapp.com/img/icon/food/dimsum.png"
+          "image_url":"https://amlchat.herokuapp.com/img/icon/food/dimsum.png"
         },
         {
           "content_type":"text",
           "title":"Asian",
           "payload":"",
-          "image_url":"https://amlfbmsger.herokuapp.com/img/icon/food/asianfood.png"
+          "image_url":"https://amlchat.herokuapp.com/img/icon/food/asianfood.png"
         },
         {
           "content_type":"text",
           "title":"Hotel Dining",
           "payload":"",
-          "image_url":"https://amlfbmsger.herokuapp.com/img/icon/food/hoteldining.png"
+          "image_url":"https://amlchat.herokuapp.com/img/icon/food/hoteldining.png"
         },
         {
           "content_type":"text",
           "title":"Western",
           "payload":"",
-          "image_url":"https://amlfbmsger.herokuapp.com/img/icon/food/spagetti.png"
+          "image_url":"https://amlchat.herokuapp.com/img/icon/food/spagetti.png"
         },
         {
           "content_type":"text",
           "title":"Others",
           "payload":"",
-          "image_url":"https://amlfbmsger.herokuapp.com/img/icon/food/burger.png"
+          "image_url":"https://amlchat.herokuapp.com/img/icon/food/burger.png"
         }
       ];
 
@@ -602,7 +605,7 @@ function sendFoodDetailMessage(recipientId, callback){
           "elements" : [
             {
               "title" : "Le 188 Restaurant & Lounge (Harbour Grand Hong Kong)",
-              "image_url" : "https://amlfbmsger.herokuapp.com/img/restaurant_img/le188.png",
+              "image_url" : "https://amlchat.herokuapp.com/img/restaurant_img/le188.png",
               "subtitle" : "Address: 41/F,Harbour Grand Hong Kong, 23 Oil Street North Point,Hong Kong",
               "default_action" : {
                 "type" : "web_url",
@@ -631,7 +634,7 @@ function sendFoodDetailMessage(recipientId, callback){
 var tripOptions = [
     {
       "title" : "ChangSha",
-      "image_url" : "https://amlfbmsger.herokuapp.com/img/amllogo.jpeg",
+      "image_url" : "https://amlchat.herokuapp.com/img/amllogo.jpeg",
       "subtitle" : "15000 Miles",
       "default_action" : {
         "type" : "web_url",
@@ -650,7 +653,7 @@ var tripOptions = [
     },
     {
       "title" : "FuZhou",
-      "image_url" : "https://amlfbmsger.herokuapp.com/img/amllogo.jpeg",
+      "image_url" : "https://amlchat.herokuapp.com/img/amllogo.jpeg",
       "subtitle" : "15000 Miles",
       "default_action" : {
         "type" : "web_url",
@@ -908,7 +911,7 @@ function sendRestaurantMessage(recipientId) {
           elements: [{
             title: "Alibi - Wine Dine Be Social (Cordis, Hong Kong)",
             subtitle: "Located on the fifth floor of the hotel, the 5,500 square foot urban chic space presents all that a bar should have and a little more, as well as be true to its namesake – a place to escape, wine, dine and be social. ",             
-            image_url: "https://amlfbmsger.herokuapp.com/img/restaurant_img/alibi.jpeg",
+            image_url: "https://amlchat.herokuapp.com/img/restaurant_img/alibi.jpeg",
             buttons: [{
               type:"postback",
               title:"Check this out",
@@ -919,7 +922,7 @@ function sendRestaurantMessage(recipientId) {
           }, {
             title: "Beerliner German Bar & Restaurant",
             subtitle: "With a casual yet modern ambiance, Beerliner German Bar & Restaurant brings Germany's best-known culinary traditions to Hong Kong. ",             
-            image_url: "https://amlfbmsger.herokuapp.com/img/restaurant_img/beerliner.jpeg",
+            image_url: "https://amlchat.herokuapp.com/img/restaurant_img/beerliner.jpeg",
             buttons: [{
               type:"postback",
               title:"Check this out",
@@ -930,7 +933,7 @@ function sendRestaurantMessage(recipientId) {
           }, {
             title: "SKY726",
             subtitle: "Perched on the top floor of the Nathan 726 with an expansive view of the Mongkok skyline, Sky 726 offers its own perspective on French dining.",              
-            image_url: "https://amlfbmsger.herokuapp.com/img/restaurant_img/Sky726.jpeg",
+            image_url: "https://amlchat.herokuapp.com/img/restaurant_img/Sky726.jpeg",
             buttons: [{
               type:"postback",
               title:"Check this out",
@@ -941,7 +944,7 @@ function sendRestaurantMessage(recipientId) {
           }, {
             title: "The Beerhouse",
             subtitle: "The Beerhouse is located on the top floor of Langham Place in Mongkok, Kowloon.",             
-            image_url: "https://amlfbmsger.herokuapp.com/img/restaurant_img/beerhouse.jpg",
+            image_url: "https://amlchat.herokuapp.com/img/restaurant_img/beerhouse.jpg",
             buttons: [{
               type:"postback",
               title:"Check this out",
