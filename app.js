@@ -366,6 +366,7 @@ function receivedPostback(event) {
           }
         }
       }
+      callSendAPI(messgeData);
     break;
     case "beerhouse":
     break;
