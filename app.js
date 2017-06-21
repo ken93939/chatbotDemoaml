@@ -101,7 +101,7 @@ function receivedMessage(event) {
   var client = new Client();
 
   console.log('--------ansonv3--------');
-  client.get("https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/7b537641-dc33-4c31-bd02-a2bd45da7b1b?subscription-key=42440c4b8a6446019961eb161cbe1765&verbose=true&timezoneOffset=0&q=" + messageText, function (data, response) {
+  client.get("https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/dbfed576-0421-475e-b793-f165f846bf62?subscription-key=42440c4b8a6446019961eb161cbe1765&timezoneOffset=0&verbose=true&q=" + messageText, function (data, response) {
     // parsed response body as js object 
     messageIntent = data.topScoringIntent.intent;
     if (data.entities[0] != null) {
