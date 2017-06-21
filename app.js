@@ -201,7 +201,7 @@ function receivedMessage(event) {
 
         case 'dining':
             if(data.entities.length>1){
-              sendTextMessage(senderID, "Sure, I would be happy to help you. \n Here is the list of Western restaurants in North Point, Hong Kong:", function(err, recipientId){
+              sendTextMessage(senderID, "Sure, I would be happy to help you. \nHere is the list of Western restaurants in North Point, Hong Kong:", function(err, recipientId){
                 sendFoodDetailMessage(recipientId, function(err, recipientId){
                   sendTextMessage(recipientId,"Is there anything else I can help with?");
                 })
@@ -212,7 +212,7 @@ function receivedMessage(event) {
             }
           break;
         case 'trip':
-          sendTextMessage(senderID, "Sure, I can help you with that. \n With your current balance of 17,352 miles, here is the list of available redemption destinations:", function(err, recipientId){
+          sendTextMessage(senderID, "Sure, I can help you with that. \nWith your current balance of 17,352 miles, here is the list of available redemption destinations:", function(err, recipientId){
             sendTripMessage(recipientId, function(err,recipientId){
               sendTextMessage(senderID,"Is there anything else I can help with?");
             });
