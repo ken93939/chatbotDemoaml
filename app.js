@@ -616,7 +616,7 @@ function sendFoodDetailMessage(recipientId, callback){
                 {
                   "type" : "web_url",
                   "url" : "http://dining.asiamiles.com/partner/le-188-restaurant-lounge?a=North%20Point",
-                  "title" : "Check this out"
+                  "title" : "More details"
                 },
                 {
                   "type" : "element_share"
@@ -635,7 +635,7 @@ function sendFoodDetailMessage(recipientId, callback){
 var tripOptions = [
     {
       "title" : "ChangSha",
-      "image_url" : "https://amlchat.herokuapp.com/img/amllogo.jpeg",
+      "image_url" : "https://amlchat.herokuapp.com/img/trip/changsha.jpg",
       "subtitle" : "15000 Miles",
       "default_action" : {
         "type" : "web_url",
@@ -654,7 +654,7 @@ var tripOptions = [
     },
     {
       "title" : "FuZhou",
-      "image_url" : "https://amlchat.herokuapp.com/img/amllogo.jpeg",
+      "image_url" : "https://amlchat.herokuapp.com/img/trip/fuzhou.jpg",
       "subtitle" : "15000 Miles",
       "default_action" : {
         "type" : "web_url",
@@ -664,6 +664,25 @@ var tripOptions = [
         {
           "type" : "web_url",
           "url" : "https://www.asiamiles.com/am/en/flightsearchlogin?ACTION=RED_AWARD_SEARCH&ENTRYLANGUAGE=en&ENTRYCOUNTRY=HK&ERRORURL=https://www.asiamiles.com/amwdsibered/jsp/redeem-flights/asia-miles-flight-award-redemption.jsp?IBERedeemType_byDest&DEPARTUREDATE=20170620&ARRIVALDATE=20170624&ORIGIN=HKG&DESTINATION=FOC&CABINCLASS=Y&TRIPTYPE=R&ADULT=1&CHILD=0&INFANT=0&FLEXIBLEDATE=true&MEMBERID=undefined",
+          "title" : "Book the ticket"
+        },
+        {
+          "type" : "element_share"
+        }
+      ]
+    },
+    {
+      "title" : "Da Nang",
+      "image_url" : "https://amlchat.herokuapp.com/img/trip/danang.jpg",
+      "subtitle" : "15000 Miles",
+      "default_action" : {
+        "type" : "web_url",
+        "url" : "https://www.asiamiles.com/am/en/flightsearchlogin?ACTION=RED_AWARD_SEARCH&ENTRYLANGUAGE=en&ENTRYCOUNTRY=HK&ERRORURL=https://www.asiamiles.com/amwdsibered/jsp/redeem-flights/asia-miles-flight-award-redemption.jsp?IBERedeemType_byDest&DEPARTUREDATE=20170621&ARRIVALDATE=20170628&ORIGIN=HKG&DESTINATION=DAD&CABINCLASS=Y&TRIPTYPE=R&ADULT=1&CHILD=0&INFANT=0&FLEXIBLEDATE=true&MEMBERID=undefined"
+      },
+      "buttons": [
+        {
+          "type" : "web_url",
+          "url" : "https://www.asiamiles.com/am/en/flightsearchlogin?ACTION=RED_AWARD_SEARCH&ENTRYLANGUAGE=en&ENTRYCOUNTRY=HK&ERRORURL=https://www.asiamiles.com/amwdsibered/jsp/redeem-flights/asia-miles-flight-award-redemption.jsp?IBERedeemType_byDest&DEPARTUREDATE=20170621&ARRIVALDATE=20170628&ORIGIN=HKG&DESTINATION=DAD&CABINCLASS=Y&TRIPTYPE=R&ADULT=1&CHILD=0&INFANT=0&FLEXIBLEDATE=true&MEMBERID=undefined",
           "title" : "Book the ticket"
         },
         {
