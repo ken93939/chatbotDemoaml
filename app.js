@@ -219,7 +219,14 @@ function receivedMessage(event) {
           })
         break;
         case 'food':
-            sendTextMessage(senderID, "Great! These are the Western restaurants in your area.", sendRestaurantMessage);
+            sendTextMessage(senderID, "Great! These are the Western restaurants in your area.", function(err,recipientId){
+              if(err){
+                console.log(err);
+              }
+              else{
+                sendRestaurantMessage(recipientId);
+              }
+            });
             // sendRestaurantMessage(senderID);
             // other_restaurant = true;
           break;
