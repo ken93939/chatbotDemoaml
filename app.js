@@ -629,7 +629,7 @@ function sendFoodDetailMessage(recipientId, callback){
     }
   }
 
-  callSendAPI(messgeData, callback);
+  callSendAPI(messageData, callback);
 }
 
 var tripOptions = [
@@ -710,7 +710,7 @@ function sendFoodMessage(recipientId) {
 //     console.log(err);
 //   }
 //   else{
-//     var messgeData = {
+//     var messageData = {
 //       "recipient" : {
 //         "id" : recipientId
 //       },
